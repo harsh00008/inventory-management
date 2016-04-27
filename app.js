@@ -303,7 +303,6 @@ app.post('/api/admin/item', function(req, res){
                 res.status(400).send({error: "Could not find the category you requested"});
             }
         }).then(function(category){
-            console.log(req.body.unit_cost);
             if(req.body.tag_id!== null && req.body.name !== null && req.body.quantity!== null && req.body.unit_cost !== null){
                 itemModel.findOne({
                     where: {

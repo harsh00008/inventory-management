@@ -7,6 +7,11 @@ var Category = require('./category').CategoryModel;
 var Department = require('./department').DepartmentModel;
 var Item = require('./item').ItemModel;
 
+Item.sync();
+Department.sync();
+Category.sync();
+Admin.sync();
+
 
 Item.belongsTo(Department, {
     foreignKey: 'department_id'
@@ -15,6 +20,7 @@ Item.belongsTo(Department, {
 Item.belongsTo(Category, {
     foreignKey: 'category_id'
 });
+
 
 
 db.sync().then(function(){
