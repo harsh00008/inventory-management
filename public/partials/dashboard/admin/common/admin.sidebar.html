@@ -1,0 +1,34 @@
+<div class="menu-container">
+    <ul class="menu">
+        <li>
+            <span class="title"><i class="fa fa-user" aria-hidden="true"></i> Account</span>
+            <ul class="submenu">
+                <li><a ui-sref="admin"><i class="fa fa-user" aria-hidden="true"></i> Settings</a></li>
+                <li><a ui-sref="logout"><i class="fa fa-user" aria-hidden="true"></i> Logout</a></li>
+            </ul>
+        </li>
+        <li>
+            <span class="title"><i class="fa fa-user" aria-hidden="true"></i> Categories</span>
+            <ul class="submenu">
+                <li><a ui-sref="category" ui-sref-opts="{reload: true}"><i class="fa fa-user" aria-hidden="true"></i> View Categories</a></li>
+                <li><a ui-sref="category.add"><i class="fa fa-user" aria-hidden="true"></i> Add Category</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="title"><i class="fa fa-user" aria-hidden="true"></i> Departments</span>
+            <ul class="submenu">
+                <li><a ui-sref="department" ui-sref-opts="{reload: true}"><i class="fa fa-user" aria-hidden="true"></i> View Departments</a></li>
+                <li><a ui-sref="department.add"><i class="fa fa-user" aria-hidden="true"></i> Add Department</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <span class="title"><i class="fa fa-user" aria-hidden="true"></i> Items</span>
+            <ul class="submenu">
+                <li><a ui-sref="item" ui-sref-opts="{reload: true}"><i class="fa fa-user" aria-hidden="true"></i> View Items</a></li>
+                <li><a ui-sref="item.add"><i class="fa fa-user" aria-hidden="true"></i> Add Item</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>

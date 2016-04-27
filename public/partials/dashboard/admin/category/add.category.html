@@ -1,0 +1,20 @@
+<h1>Add Category</h1>
+<hr>
+<div class="col-md-6">
+    <div class="alert alert-danger" ng-show="error" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        {{error}}
+    </div>
+    <form name="addCategoryForm" ng-submit="addCategoryForm.$valid && addCategory()">
+        <div class="form-group">
+            <label for="category-name">Category name:</label>
+            <input type="text" class="form-control" name="category-name" id="category-name" require placeholder="Enter category name" ng-model="category.category_name">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Create Category">
+        </div>
+    </form>
+
+</div>
+

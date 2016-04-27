@@ -1,0 +1,34 @@
+<div class="admin-dashboard">
+    <aside class="dashboard-sidebar" ng-include="'./partials/dashboard/admin/common/admin.sidebar.html'"></aside>
+    <div class="container-fluid dashboard-content">
+        <section class="col-md-12 col">
+
+            <div ui-view>
+                <h1>Categories</h1>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <th>Category Name</th>
+                        <th>Created at</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="category in categories">
+                            <td>
+                                {{category.category_name}}
+                            </td>
+                            <td>
+                                {{category.createdAt}}
+                            </td>
+                            <td>
+                                <a ui-sref="category.edit({id: category.category_id})" class="btn btn-primary">Edit</a>
+                                <button ng-click="remove(category.category_id)"  class="btn btn-danger">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </div>
+</div>

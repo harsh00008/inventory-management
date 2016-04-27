@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+aside.dashboard-sidebar {
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  background: #222D32; }
+  aside.dashboard-sidebar ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0; }
+    aside.dashboard-sidebar ul.menu li span.title {
+      color: white;
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      box-sizing: border-box; }
+      aside.dashboard-sidebar ul.menu li span.title:hover {
+        -webkit-box-shadow: inset 0px 0px 0px 0px #f00;
+        -moz-box-shadow: inset 0px 0px 0px 0px #f00;
+        box-shadow: inset 2px 0px 0px 0px #4b95fe;
+        color: #b8c7ce; }
+    aside.dashboard-sidebar ul.menu li ul.submenu {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      aside.dashboard-sidebar ul.menu li ul.submenu li a {
+        color: #F8F9F9;
+        padding: 10px 15px;
+        display: block;
+        text-decoration: none;
+        font-size: 1.3rem; }
+        aside.dashboard-sidebar ul.menu li ul.submenu li a:hover {
+          text-decoration: none; }
+
+.dashboard-content {
+  margin-left: 200px; }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,23 @@
+{
+  "name": "sjsu-inventory",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "^5.7.0",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.21.0",
+    "sequelize-cli": "^2.3.1"
+  },
+  "description": "SJSU inventory management system",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harsh Malewar",
+  "license": "ISC"
+}

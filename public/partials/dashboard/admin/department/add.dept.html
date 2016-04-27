@@ -1,0 +1,47 @@
+<h1>Add Department</h1>
+<hr>
+<div class="col-md-6">
+    <div class="alert alert-danger" ng-show="error" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        {{error}}
+    </div>
+    <form name="addDepartmentForm" ng-submit="addDepartmentForm.$valid && addDepartment()">
+        <div class="form-group">
+            <label for="dept-name">Department name:</label>
+            <input type="text" class="form-control" name="dept-name" id="dept-name" required placeholder="Enter department name" ng-model="department.name">
+        </div>
+        <div class="form-group">
+            <label for="dept-user">Username:</label>
+            <input type="text" pattern="(?=^.{3,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$" class="form-control" name="dept-name" id="dept-user" required placeholder="Enter department username for login"  ng-model="department.username">
+        </div>
+        <div class="form-group">
+            <label for="dept-pass">Password:</label>
+            <input type="password" class="form-control" name="dept-pass" id="dept-pass" required placeholder="Enter department pass" ng-model="department.password">
+        </div>
+
+        <div class="form-group">
+            <label for="dept-repass">Again:</label>
+            <input type="password" class="form-control" name="dept-repass" id="dept-repass" require placeholder="Enter department password agaib" ng-model="department.repassword">
+        </div>
+        <div class="form-group">
+            <label for="dept-manager">Department Manager:</label>
+            <input type="text" class="form-control" name="dept-name" id="dept-manager" required placeholder="Enter department manager name" ng-model="department.manager">
+        </div>
+        <div class="form-group">
+            <label for="dept-phone">Department phone:</label>
+            <input type="text" class="form-control" name="dept-phone" id="dept-phone"  placeholder="Enter department phone" ng-model="department.phone">
+        </div>
+
+        <div class="form-group">
+            <label for="dept-location">Department location:</label>
+            <input type="text" class="form-control" name="dept-plocationhone" id="dept-location"  placeholder="Enter department location" ng-model="department.location">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Create Department">
+        </div>
+    </form>
+
+</div>
+

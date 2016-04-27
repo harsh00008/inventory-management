@@ -1,0 +1,51 @@
+<div class="admin-dashboard">
+    <aside class="dashboard-sidebar" ng-include="'./partials/dashboard/admin/common/admin.sidebar.html'"></aside>
+    <div class="container-fluid dashboard-content">
+        <section class="col-md-12 col">
+
+            <div ui-view>
+                <h1>Departments</h1>
+                <hr>
+                <div class="alert alert-danger" ng-show="error" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    {{error}}
+                </div>
+                <table class="table">
+                    <thead>
+                    <th>Department Name</th>
+                    <th>Username</th>
+                    <th>Manager</th>
+                    <th>Contact</th>
+                    <th>Item Count</th>
+                    <th>Action</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="department in departments">
+                        <td>
+                            {{department.name}}
+                        </td>
+                        <td>
+                            {{department.username}}
+                        </td>
+                        <td>
+                            {{department.manager}}
+                        </td>
+                        <td>
+                            {{department.phone}}
+                        </td>
+                        <td>
+                            {{department.items.length}}
+                        </td>
+                        <td>
+                            <a ui-sref="department.edit({id: department.department_id})" class="btn btn-primary">Edit</a>
+                            <button ng-click="remove(department.department_id)"  class="btn btn-danger">Remove</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+    </div>
+</div>

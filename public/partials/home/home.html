@@ -1,0 +1,33 @@
+<header ng-include="'partials/common/home.topbar.html'"></header>
+<section class="container">
+    <div ng-controller="homeCtrl">
+        <div class="col-md-6 col">
+
+        </div>
+        <div class="col-md-6 col">
+            <h2>Admin login</h2>
+
+            <div class="alert alert-danger" ng-show="error" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                {{error}}
+            </div>
+            <form name="adminLoginForm" ng-submit="adminLoginForm.$valid && loginAdmin(admin)">
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" ng-model="admin.username" placeholder="Admin username" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="admin-pass">Password</label>
+                    <input type="password" id="admin-pass" ng-model="admin.password" placeholder="Admin Passwrd" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary pull-right" value="Login"/>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+

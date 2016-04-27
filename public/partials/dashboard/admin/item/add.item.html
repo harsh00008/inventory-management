@@ -1,0 +1,92 @@
+<h1>Add Item</h1>
+<hr>
+<div class="col-md-6">
+    <div class="alert alert-danger" ng-show="error" role="alert" ng-init="item.category=categories[0]">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        {{error}}
+    </div>
+    <form name="addItemForm" ng-submit="addItemForm.$valid && addItem()">
+        <div class="form-group">
+            <label for="item-tag">Tag:</label>
+            <input type="number" step="1" min="0" class="form-control" name="item-tag" id="item-tag" required placeholder="(required)" ng-model="item.tag_id">
+        </div>
+        <div class="form-group">
+            <label for="item-name">Name:</label>
+            <input type="text" class="form-control" name="item-name" id="item-name" required placeholder="(required)"  ng-model="item.name">
+        </div>
+        <div class="form-group">
+            <label for="item-desc">Description:</label>
+            <textarea class="form-control" name="item-desc" id="item-desc"  placeholder="(optional)" ng-model="item.description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="item-serial">Serial #:</label>
+            <input type="text" class="form-control" name="item-serial" id="item-serial"  placeholder="(optional)">
+        </div>
+        <div class="form-group">
+            <label for="item-category">Category:</label>
+            <select id="item-category" class="form-control" ng-model="item.category" required ng-options="category.category_name for category in categories">
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item-dept">Department:</label>
+            <select id="item-dept" class="form-control" ng-model="item.department" required ng-options="department.name for department in departments">
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="item-cost">Unit Cost:</label>
+            <input type="number" step="0.01" min="0" class="form-control" name="item-cost" id="item-cost" required  placeholder="(default 0)" ng-model="item.unit_cost">
+        </div>
+        <hr>
+        <div class="form-group">
+            <label>Purchase Date:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup ng-model="item.purchase_date" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" />
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="item-qty">Purchase Quantity:</label>
+            <input type="number" step="1" min="0" class="form-control" name="item-qty" id="item-qty"  placeholder="(default 0)" ng-model="item.quantity">
+        </div>
+
+        <div class="form-group">
+            <label>Disposal Date:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup ng-model="item.disposal_date" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" />
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="item-disposed">How many disposed of {{item.quantity}}:</label>
+            <input type="number" step="1" min="0" max="{{item.quantity}}" class="form-control" name="item-disposed" id="item-disposed"  placeholder="(default 0)" ng-model="item.disposed">
+        </div>
+
+
+        <input type="checkbox" class="" name="item-approved" id="item-approved"  ng-model="item.approved"> Approved Item
+        <hr>
+
+        <div class="form-group">
+            <label for="item-other">Other Information:</label>
+            <textarea class="form-control" name="item-other" id="item-other"  placeholder="(optional) miscellaneous information" ng-model="item.other_information"></textarea>
+        </div>
+
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Create Department">
+
+        </div>
+    </form>
+
+</div>
+
